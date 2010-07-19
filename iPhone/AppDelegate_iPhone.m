@@ -20,7 +20,8 @@
 	
     NSLog(@"%s", __func__);
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
+    TitleViewController *titleViewContrl = [[TitleViewController alloc] init];
+    [window addSubview:titleViewContrl.view];
     [window makeKeyAndVisible];
 	
 	return YES;

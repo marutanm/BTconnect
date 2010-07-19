@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TitleViewController.h"
 
 @interface AppDelegate_iPhone : NSObject <UIApplicationDelegate> {
     UIWindow *window;
