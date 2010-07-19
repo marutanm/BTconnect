@@ -11,7 +11,11 @@
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
+    int retVal;
+	if ([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)] && [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+		retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate_iPad");
+	else
+		retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate_iPhone");		
     [pool release];
     return retVal;
 }
